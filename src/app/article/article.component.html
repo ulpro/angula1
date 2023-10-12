@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;">
+    <img [src]="url" class="card-img-top" [alt]="alternative">
+    <div class="card-body">
+      <h5 class="card-title"[ngStyle]="{color:getcolor()}">{{titre | uppercase}}
+        <span *ngIf="dispo==false">-indisponible</span>
+      </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a routerLink="/details/{{id}}">voir l'article</a><br>
+      <button   (click)="OnClick()" [ngClass]="{'btn': true, 'btn-primary': jaime === true}">j'aime</button>
+      <button   (click)="OnClick()"[ngClass]="{'btn': true, 'btn-primary': jaime ===false}">j'aime pas </button>
+      <p>nombre de like:{{nbre}}</p>
+      <input type="text" placeholder="commentaire" [(ngModel)]="comment">
+      <p>commentaire:{{comment}}</p>
+    </div>
+  </div>

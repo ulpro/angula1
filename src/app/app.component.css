@@ -1,0 +1,10 @@
+.s{
+    color: aqua;
+}
+.home{
+    justify-content: center;
+    display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+    padding: 5%;
+}

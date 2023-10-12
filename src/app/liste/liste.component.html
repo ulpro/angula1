@@ -1,0 +1,12 @@
+<div style="text-align:center; padding-top:2%; font-size: 1.5rem;">
+    <p class="s">  {{message}}  </p>
+  
+  </div>
+  <div class="home">
+  
+  <app-article *ngFor="let element of liste" [titre]="element.titre" [id]="element.id" [prix]="element.prix"[url]="element.url"
+   [dispo]="element.dispo" [alternative]="element.alternative"
+   (info)="onAffiche($event)"></app-article>
+ <!-- <app-article [titre]="'titre2'" [prix]="3"(info)="onAffiche($event)"></app-article>
+  <app-article [titre]="'titre4'" [prix]="0"(info)="onAffiche($event)"></app-article>-->
+  </div>

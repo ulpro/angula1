@@ -1,0 +1,19 @@
+<form (ngSubmit)="onsubmit(f)" #f="ngForm">
+  <input class="form-control" [(ngModel)]="titletoadd" type="text"  name="title" required minlength="4"#title="ngModel">
+  <div *ngIf="title.invalid && (title.dirty || title.touched)">
+    <div *ngIf="title.errors?.['required']"> 
+      titre obligatoire
+    </div>
+    <div *ngIf="title.errors?.['minlength']">
+      le titre doit avoir un minimun de 4 caracteres
+    </div>
+  </div>
+  <input class="form-control" [(ngModel)]="pricetoadd" type="number"  name="price" #price="ngModel">
+  <div *ngIf="price.invalid && (price.dirty || price.touched)">
+    <div *ngIf="price.errors?.['required']"> 
+      prix obligatoire
+    </div>
+   
+  </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+  </form>
